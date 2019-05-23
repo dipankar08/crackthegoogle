@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Mixins*/
 /* Global Items */
 @import url("https://fonts.googleapis.com/css?family=Lato:400");
@@ -222,13 +223,13 @@ ul.twoColumn li {
 }
 
 /* Style on Text*/
-p {
+p, h1, h2, h3, h4, h5 {
   display: block;
   width: 100%;
   margin-top: 1em;
 }
 
-p.heroText {
+p.heroText, h1.heroText, h2.heroText, h3.heroText, h4.heroText, h5.heroText {
   font-size: 2.97rem;
   line-height: 1.2;
   color: #212529;
@@ -236,12 +237,12 @@ p.heroText {
 }
 
 @media (max-width: 840px) {
-  p.heroText {
+  p.heroText, h1.heroText, h2.heroText, h3.heroText, h4.heroText, h5.heroText {
     width: 100%;
   }
 }
 
-p.sectionHeading {
+p.sectionHeading, h1.sectionHeading, h2.sectionHeading, h3.sectionHeading, h4.sectionHeading, h5.sectionHeading {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
@@ -250,12 +251,12 @@ p.sectionHeading {
   color: #212529;
 }
 
-p.sectionSubHeading {
+p.sectionSubHeading, h1.sectionSubHeading, h2.sectionSubHeading, h3.sectionSubHeading, h4.sectionSubHeading, h5.sectionSubHeading {
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
 
-p.itemHeading {
+p.itemHeading, h1.itemHeading, h2.itemHeading, h3.itemHeading, h4.itemHeading, h5.itemHeading {
   margin-bottom: 0.5rem;
   line-height: 1.1;
   font-weight: 300;
@@ -263,29 +264,36 @@ p.itemHeading {
   color: #212529;
 }
 
-p.paragraph {
+p.paragraph, h1.paragraph, h2.paragraph, h3.paragraph, h4.paragraph, h5.paragraph {
   font-size: 15px;
   font-weight: 300;
   color: #868e96;
 }
 
-p.price span {
+p.price span, h1.price span, h2.price span, h3.price span, h4.price span, h5.price span {
   font-size: 18px;
   color: #adb5bd;
   text-transform: uppercase;
 }
 
-p.price span.value {
+p.price span.value, h1.price span.value, h2.price span.value, h3.price span.value, h4.price span.value, h5.price span.value {
   font-size: 50px;
   color: #1d82ff;
 }
 
-p.price span.dolor {
+p.price span.dolor, h1.price span.dolor, h2.price span.dolor, h3.price span.dolor, h4.price span.dolor, h5.price span.dolor {
   font-size: 20px;
   vertical-align: top;
   color: #1d82ff;
 }
 
+/* SEO tags
+<h1></h1> – usually reserved for webpage titles.
+<h2></h2> – highlights the topic of the title.
+<h3></h3> – reflects points in regards to the topic.
+<h4></h4> – supports points from <h3>.
+<h5></h5> – not often used, but great for supporting points of <h4>.
+*/
 /* Define Box */
 .gridBox {
   -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -412,7 +420,7 @@ a, a:hover {
   color: #ffffff;
 }
 
-.colorScheme .invertColor p {
+.colorScheme .invertColor p, .colorScheme .invertColor h1, .colorScheme .invertColor h2, .colorScheme .invertColor h3, .colorScheme .invertColor h4, .colorScheme .invertColor h5 {
   color: #ffffff;
 }
 
