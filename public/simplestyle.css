@@ -1,4 +1,7 @@
-@charset "UTF-8";
+/* Best Design Website 
+1. https://crello.com/user/settings/account/
+*/
+/* Building colors */
 /*Mixins*/
 /* Global Items */
 @import url("https://fonts.googleapis.com/css?family=Lato:400");
@@ -21,31 +24,15 @@ body {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
+}
+
+.theme-white body {
   color: #868e96;
-  background-color: #fff;
+  background-color: #f2f4f9;
 }
 
-/* Input Form */
-.inputForm input, .inputForm select {
-  background: #f2f2f2;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-  border: 1px solid #f2f2f2;
-  border-radius: 0.25rem;
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  height: 50px;
-  color: #495057;
-  margin-top: 1rem;
-  outline: none;
-}
-
-.inputForm input:focus, .inputForm select:focus {
-  border-color: #1d82ff;
-  background: #ffffff;
+body.inspect div {
+  border: 1px solid green;
 }
 
 /* Defing the gap in mobile devices */
@@ -154,6 +141,99 @@ body {
   width: 100%;
 }
 
+/* Input Form */
+.inputForm input, .inputForm select, .inputForm textarea {
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  border-radius: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  height: 50px;
+  margin-top: 1rem;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.theme-white .inputForm input, .theme-white .inputForm select, .theme-white .inputForm textarea {
+  color: #495057;
+  background: #f2f2f2;
+}
+
+.theme-white .inputForm input:focus, .theme-white .inputForm select:focus, .theme-white .inputForm textarea:focus {
+  border-color: #ffffff;
+}
+
+.inputForm input[type="radio"], .inputForm select[type="radio"], .inputForm textarea[type="radio"] {
+  width: auto;
+  height: auto;
+  display: inline;
+  margin-left: 2px;
+  margin-right: 3px;
+}
+
+.inputForm input.success, .inputForm select.success, .inputForm textarea.success {
+  border: 1px solid;
+}
+
+.theme-white .inputForm input.success, .theme-white .inputForm select.success, .theme-white .inputForm textarea.success {
+  border-color: green;
+}
+
+.inputForm input.error, .inputForm select.error, .inputForm textarea.error {
+  border: 1px solid;
+}
+
+.theme-white .inputForm input.error, .theme-white .inputForm select.error, .theme-white .inputForm textarea.error {
+  border-color: red;
+}
+
+/* Define Button */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn.primary {
+  color: #ffffff;
+}
+
+.theme-white .btn.primary {
+  background-color: #1d82ff;
+  border-color: #1d82ff;
+}
+
+.btn.primary.shadow {
+  -webkit-box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
+  box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
+}
+
+.btn.secondary {
+  color: #111111;
+  background-color: transparent;
+}
+
+.theme-white .btn.secondary {
+  border-color: #1d82ff;
+}
+
 /* Item List */
 ul.inlineList {
   width: 100%;
@@ -223,131 +303,246 @@ ul.twoColumn li {
 }
 
 /* Style on Text*/
-p, h1, h2, h3, h4, h5 {
+p {
   display: block;
   width: 100%;
   margin-top: 1em;
 }
 
-p.heroText, h1.heroText, h2.heroText, h3.heroText, h4.heroText, h5.heroText {
+.theme-white p {
+  color: #868e96;
+}
+
+p.heroText {
   font-size: 2.97rem;
   line-height: 1.2;
-  color: #212529;
   width: 800px;
 }
 
 @media (max-width: 840px) {
-  p.heroText, h1.heroText, h2.heroText, h3.heroText, h4.heroText, h5.heroText {
+  p.heroText {
     width: 100%;
   }
 }
 
-p.sectionHeading, h1.sectionHeading, h2.sectionHeading, h3.sectionHeading, h4.sectionHeading, h5.sectionHeading {
+.theme-white p.heroText {
+  color: #212529;
+}
+
+p.sectionHeading {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
   line-height: 1.1;
   font-weight: 300;
   font-size: 1.75rem;
+}
+
+.theme-white p.sectionHeading {
   color: #212529;
 }
 
-p.sectionSubHeading, h1.sectionSubHeading, h2.sectionSubHeading, h3.sectionSubHeading, h4.sectionSubHeading, h5.sectionSubHeading {
-  color: rgba(0, 0, 0, 0.3);
+p.sectionSubHeading {
   text-transform: uppercase;
 }
 
-p.itemHeading, h1.itemHeading, h2.itemHeading, h3.itemHeading, h4.itemHeading, h5.itemHeading {
+.theme-white p.sectionSubHeading {
+  color: #868e96;
+}
+
+p.itemHeading {
   margin-bottom: 0.5rem;
   line-height: 1.1;
   font-weight: 300;
   font-size: 1.25rem;
+}
+
+.theme-white p.itemHeading {
   color: #212529;
 }
 
-p.paragraph, h1.paragraph, h2.paragraph, h3.paragraph, h4.paragraph, h5.paragraph {
+p.paragraph {
   font-size: 15px;
   font-weight: 300;
-  color: #868e96;
 }
 
-p.price span, h1.price span, h2.price span, h3.price span, h4.price span, h5.price span {
+p.price span {
   font-size: 18px;
-  color: #adb5bd;
   text-transform: uppercase;
 }
 
-p.price span.value, h1.price span.value, h2.price span.value, h3.price span.value, h4.price span.value, h5.price span.value {
+p.price span.value {
   font-size: 50px;
+}
+
+.theme-white p.price span.value {
   color: #1d82ff;
 }
 
-p.price span.dolor, h1.price span.dolor, h2.price span.dolor, h3.price span.dolor, h4.price span.dolor, h5.price span.dolor {
+p.price span.dolor {
   font-size: 20px;
   vertical-align: top;
+}
+
+.theme-white p.price span.dolor {
   color: #1d82ff;
 }
 
-/* SEO tags
-<h1></h1> – usually reserved for webpage titles.
-<h2></h2> – highlights the topic of the title.
-<h3></h3> – reflects points in regards to the topic.
-<h4></h4> – supports points from <h3>.
-<h5></h5> – not often used, but great for supporting points of <h4>.
-*/
-/* Define Box */
-.gridBox {
+p span.bold {
+  font-weight: bold;
+}
+
+p span.italic {
+  font-style: italic;
+}
+
+p span.batch {
+  color: #ffffff;
+  padding: 5px 8px;
+  font-family: monospace;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.theme-white p span.batch.green {
+  background: green;
+}
+
+.theme-white p span.batch.red {
+  background: red;
+}
+
+.theme-white p span.batch.blue {
+  background: blue;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+/* Define Box - TESTED */
+.box {
+  padding: 1em;
+}
+
+.theme-white .box {
+  border: 1px solid #e9ecef !important;
+}
+
+.theme-light .box {
+  border: 1px solid !important;
+}
+
+.theme-dark .box {
+  border: 1px solid !important;
+}
+
+.theme-white .box.active {
+  border-color: #1d82ff !important;
+}
+
+.theme-light .box.active {
+  border-color: !important;
+}
+
+.theme-dark .box.active {
+  border-color: !important;
+}
+
+.theme-white .box.shadow {
   -webkit-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
   background: white;
 }
 
-.box {
-  border: 1px solid #e9ecef !important;
-  padding: 3rem !important;
+.theme-light .box.shadow {
+  -webkit-box-shadow: 0 10px 6px -6px;
+  box-shadow: 0 10px 6px -6px;
+  background: white;
 }
 
-.box.active {
-  border-color: #1d82ff !important;
+.theme-dark .box.shadow {
+  -webkit-box-shadow: 0 10px 6px -6px;
+  box-shadow: 0 10px 6px -6px;
+  background: white;
 }
 
-/* Define Button */
-.btn {
-  display: inline-block;
-  font-weight: 300;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  border-radius: 0.25rem;
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+/*Table*/
+table, th, td {
+  border-collapse: collapse;
 }
 
-.btn.primary {
-  color: #fff;
-  background-color: #1d82ff;
-  border-color: #1d82ff;
+.theme-white table, .theme-white th, .theme-white td {
+  border-top: 1px solid #e2dddd;
 }
 
-.btn.primary.shadow {
-  -webkit-box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
-  box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
+.theme-light table, .theme-light th, .theme-light td {
+  border-top: 1px solid;
+}
+
+.theme-dark table, .theme-dark th, .theme-dark td {
+  border-top: 1px solid;
+}
+
+table td, th td, td td {
+  padding: 22px 10px;
+}
+
+table td:first-child, th td:first-child, td td:first-child {
+  padding-left: 0px;
+}
+
+table td:last-child, th td:last-child, td td:last-child {
+  padding-right: 0px;
 }
 
 /* Componenets*/
-a, a:hover {
-  color: #AAAAAA;
+a {
   text-decoration: none;
 }
 
+.theme-white a {
+  color: #868e96;
+}
+
+.theme-white a:hover {
+  color: #1d82ff;
+}
+
+.notification {
+  padding: 6px 8px;
+  border-radius: 5px;
+}
+
+.theme-white .notification p {
+  color: #ffffff;
+  margin: 0;
+}
+
+.theme-light .notification p {
+  margin: 0;
+}
+
+.theme-dark .notification p {
+  margin: 0;
+}
+
+.theme-white .notification.success {
+  background: green;
+}
+
+.theme-white .notification.info {
+  background: blue;
+}
+
+.theme-white .notification.error {
+  background: red;
+}
+
 /* Define Gaps */
+.lineGap {
+  margin-top: 1em;
+}
+
 .regularGap {
   margin-top: 50px;
 }
@@ -362,6 +557,26 @@ a, a:hover {
 
 .xxlargeGap {
   margin-top: 150px;
+}
+
+.lineHGap {
+  margin-left: 1em;
+}
+
+.regularHGap {
+  margin-left: 20px;
+}
+
+.largeHGap {
+  margin-left: 35px;
+}
+
+.xlargeHGap {
+  margin-left: 50px;
+}
+
+.xxlargeHGap {
+  margin-left: 100px;
 }
 
 /* Define Text Align */
@@ -390,6 +605,30 @@ a, a:hover {
   padding: 0 !important;
 }
 
+.padding {
+  padding: 0;
+}
+
+.padding.s {
+  padding: 4px;
+}
+
+.padding.m {
+  padding: 1em;
+}
+
+.padding.l {
+  padding: 2em;
+}
+
+.padding.xl {
+  padding: 3em;
+}
+
+.padding.xxl {
+  padding: 4em;
+}
+
 /* Defining overlapping layer */
 .relativePosition {
   position: relative;
@@ -399,9 +638,10 @@ a, a:hover {
   position: absolute;
 }
 
-/*  we define color scheme */
+/*  we define color scheme  - We need to how this can effect the theme*/
 .colorScheme {
   color: #111111;
+  background: transparent;
 }
 
 .colorScheme a, .colorScheme a:hover {
@@ -414,21 +654,14 @@ a, a:hover {
 
 .colorScheme .invertColor {
   color: #ffffff;
+  background: transparent;
 }
 
 .colorScheme .invertColor a, .colorScheme .invertColor a:hover {
   color: #ffffff;
 }
 
-.colorScheme .invertColor p, .colorScheme .invertColor h1, .colorScheme .invertColor h2, .colorScheme .invertColor h3, .colorScheme .invertColor h4, .colorScheme .invertColor h5 {
+.colorScheme .invertColor p {
   color: #ffffff;
-}
-
-.colorScheme .success {
-  color: green;
-}
-
-.colorScheme .error {
-  color: red;
 }
 /*# sourceMappingURL=simplestyle.css.map */

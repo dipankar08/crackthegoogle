@@ -1,0 +1,323 @@
+<html class="theme-white">
+<head>
+    <link rel="stylesheet" type="text/css" href="simplestyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Interview Preparation | Land a job in Google, Amazon, Apple, Microsoft, Facebook. </title>
+    <meta name="description" content="the best Structured interview preparation coaching.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { //<<====== wont work without this
+            $(window).scroll(function() {
+                console.log('logging'+$(body).scrollTop());
+                if($(body).scrollTop() < 20){
+                    $('.navBar').removeClass('scrolled opened').addClass('invertColor');
+                } else if($(body).scrollTop() < 30){
+                    $('.navBar').removeClass('opened').addClass('scrolled');
+                } else{
+                    $('.navBar').addClass('scrolled opened').removeClass('invertColor');
+                }
+            });
+            $('#btn').click(function(){
+                let data = {"_cmd":"insert", "name": $("#name").val(), "phone" : $("#phone").val(), "email": $("#email").val(), "type": $("#type").val()};
+                if(!(data.name && data.phone && data.type && data.email)){
+                    $('#output').addClass('error').removeClass('success').html("Error:You need to fillup all data.").show();
+                    return;
+                }
+                $.ajax({
+                    type: "POST",
+                    url: 'http://simplestore.dipankar.co.in/api/nodel_codeninja',
+                    dataType: 'json',
+                    data: JSON.stringify(data),
+                    success: function (data) {
+                        $('#output').addClass('success').removeClass('error').html("Success: Request received").show();
+                    }
+                });
+            })
+        });
+    </script>
+    <style>
+        .box{
+            height: 460px;
+        }
+        .hero img {
+            height: 120px; 
+        }
+        .logo {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: auto!important;
+            color:#7a00ff;
+        }
+        .navBar{
+            color:#7a00ff;
+        }
+        .backgroud{
+            padding-bottom: 150px;
+            overflow: hidden;
+        }
+        .backgroud:before {
+            background: #665fee;
+            background: -moz-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
+            background: -webkit-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
+            background: -o-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#665fee', endColorstr='#27c2de',GradientType=1 );
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .backgroud:after {
+            content: "";
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            height: 200px;
+            width: 130%;
+            background-color: #f2f4f9;
+            -webkit-transform: rotate(-4deg); 
+            -ms-transform: rotate(-4deg);
+            transform: rotate(-4deg); 
+            z-index: 10;
+        }
+        body{
+            background-color: #f2f4f9;
+        }
+    </style>
+</head>
+<body id="body" class="colorScheme">
+    <!-- Main Body-->
+    <div class="backgroud relativePosition">
+        <div class="container relativePosition">
+            <!-- header-->
+            <div class="gridBlock navBar invertColor">
+                <div class="oneByTwo">
+                    <ul class="inlineList textLeft">
+                        <li><a href="./index.html">
+                            <img class="logo" src="logo.png" alt="Interview BootCamp" height="42" width="42">
+                            <span>Crack The Google</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="oneByTwo">
+                    <ul class="inlineList textRight">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#price">Price</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#invite">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Home -->
+            
+<div class="gridBlock textCenter xxlargeGap">
+    <div class="oneByOne">
+        <p class="sectionSubHeading noMargin">STARTING FROM JULY </p>
+        <p class="heroText noMargin">NINJA CAMP INDIA</p>
+        <p class="largeGap"><span class="btn primary">Register Now</span>  <span class="btn regularHGap secondary">Ask question</span></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+<div class="container">
+    <div class="gridBlock textCenter xxlargeGap">
+        <div class="oneByOne">
+            <p class="sectionSubHeading noMargin">Course Schedule</p>
+            <p class="sectionHeading noMargin">15 Weeks Course Schedule</p>
+        </div>
+    </div>
+    <div class="gridBlock textCenter xlargeGap">
+        <div class="oneByOne">
+            <table>
+                <tr>
+                    <td>Week No.</td>
+                    <td>Focus Areas.</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #1</td>
+                    <td>Quick Start: Computer scinece recap.</td>
+                    <td>We will quickly start the training. We will revisit the basic concept of computer science like Data-Structure, Algorithms, Sorting-Searching and complexity analysis. We will also talk about standard language support for the implementation of these algorithms.</td>
+                </tr>
+                <tr>
+                    <td>Week #2</td>
+                    <td>Handling Array Problem</td>
+                    <td>Arrays are the fundamental of computer science. You definitely expect an array problem in the technical interview ( in fact in Google and Facebook interview). However, the array problem can be super complex. I will teach you the tricks to handle problem-related to the array.</td>
+                </tr>
+                <tr>
+                    <td>Week #3</td>
+                    <td>Problem Solving with Strings</td>
+                    <td>Strings problems generally solved by reading the character one by one. But "finding the smallest substring in a string without duplicate" might need some extra thoughts to derive the solutions. We will discuss some mind-blowing problem related to string in this session.</td>
+                </tr>
+                <tr>
+                    <td>Week #4</td>
+                    <td>Problem Solving using Matrix With Recurssion</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #5</td>
+                    <td>Problem Solving using LinkedList with Dynamic Memory Allocation</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #6</td>
+                    <td>Problem Solving using Stack</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #7</td>
+                    <td>Problem Solving using Queue</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #8</td>
+                    <td>Problem Solving using Priotity Queue and Heap</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #9</td>
+                    <td>Problem Solving using Trees and Graphs</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #10</td>
+                    <td>Identify Binary Search Problem</td>
+                    <td>There are so many problems which can be solved using Binary search - but just seeing the problem, you are not able to realize that. How to get an indication that a binary search might be useful.</td>
+                </tr>
+                <tr>
+                    <td>Week #11</td>
+                    <td>Handing Sorting Problems</td>
+                    <td>People know about bubble sort and selecting sort, However, QuickSort or Merge sort is super useful while solving other sorting problem. We will explore the possibility to use "merge technical" or "selecting techniques" while solving other problems.</td>
+                </tr>
+                <tr>
+                    <td>Week #12.</td>
+                    <td>Problem solving with Divide and Conquer.</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #13</td>
+                    <td>Problem solving with Greedy Approach.</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #14</td>
+                    <td>Problem solving with Dynamic programming</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+                <tr>
+                    <td>Week #15</td>
+                    <td> Test Interview and feedback (3 hours)</td>
+                    <td>ProgramDeatils </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- FAQ-->
+<div class="container">
+    <a name="faq"></a>
+    <div class="gridBlock textCenter xxlargeGap">
+        <div class="oneByOne">
+                <p class="sectionSubHeading noMargin">FAQs</p>
+                <p class="sectionHeading noMargin">Do you have any question?</p>
+        </div>
+    </div>
+    <div class="gridBlock xlargeGap">
+        <ul class="oneColumn">
+            <li>
+                <p class="itemHeading ">What is the price for this course?</p>
+                <p class="paragraph ">This is a NOT a free service. The frees for this course is 25,000 INR. You need to pay 5,000 INR on registration and you need to pay rest 20,000 INR before the first class. This cost was determine based on the value you will get it from.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">Why this course is only for indian students/engineers?</p>
+                <p class="paragraph ">We see there is high demand of this course from india. But most of them can't effort original rate (e.g 110 dolors/hrs ~ 10,000 INR/ours) rate for this. We are trying this out by setting the minimum amount so that people can effort. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">I am working at service based org like TCS, WIPRO. Can I attend this training?</p>
+                <p class="paragraph ">Yes, this course has also designed for the people who is working at IT. Talented engineers are not happy with service based org and want to move to product based org, but they don;t know where to start - We are here to help them out. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">I am already working or product based org and decent CS knowledge ?</p>
+                <p class="paragraph"> That would be great! We have multiple batches for this program. Based on your competence and need, we will put you in right batch.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">What is the size of each batch ?</p>
+                <p class="paragraph ">We have at most 10 people in a batch. we run multiple batches based on the competence and need, please talk to the contact person of any help.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">What will it change after completing this course?</p>
+                <p class="paragraph "> These sessions are targeted for people who want to master the problem-solving skill. The sessions are expected to be mostly technical and heavy on coding skill. This leaves you with a sense of having learned something useful in your daily life as a software engineer. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">What are the goals of these programs?</p>
+                <p class="paragraph ">The main aim to shift your mind and put it into software engineer interview mode and make you confident of cracking difficult software engineering interviews. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">What the programs are NOT?</p>
+                <p class="paragraph ">This course is not a substitute for an “algorithms class” or  “data structure class”. They are not a list of "interview questions” which is to be solved.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">What language does the course use?</p>
+                <p class="paragraph ">The problem-solving technique is language agnostic, so you can use any language you want code then .In general, we provide solutions in Pseudocode and C++/Java.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">What are the prerequisites?</p>
+                <p class="paragraph ">Nothing, You should be eager to learn. The fundamental knowledge of data structure and basic coding skill can help you. If you are not from CS background, please let us know. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">How is the each session structured?</p>
+                <p class="paragraph ">Please see the above table for details.</p>
+            </li>
+            <li>
+                <p class="itemHeading ">Can I get refund if I are not happy?</p>
+                <p class="paragraph">Unfortunately, we don't refund for this course. We will try our best to make these sessions perfect and useful to you. If you are still unhappy, you might request for attending an extra session. </p>
+            </li>
+            <li>
+                <p class="itemHeading ">I still have some other question. Can you help?</p>
+                <p class="paragraph">Please have a look to our main <a>FAQ</a> You can always send feedback or ask question in our <a>facebook group.</a></p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Footer-->
+    <div class="gridBlock section_gap">
+        <ul class="inlineList textCenter">
+            <li><span class="colophon">Crack The Google BootCamp © 2019</span></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#price">Price</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#invite">Contact Us</a></li>
+        </ul>
+    </div>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            xfbml            : true,
+            version          : 'v3.3'
+            });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="626320334437973"
+        theme_color="#fa3c4c">
+        </div>
+</body>
+</html>

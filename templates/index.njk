@@ -1,117 +1,5 @@
-<html class="theme-white">
-<head>
-    <link rel="stylesheet" type="text/css" href="simplestyle.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Interview Preparation | Land a job in Google, Amazon, Apple, Microsoft, Facebook. </title>
-    <meta name="description" content="the best Structured interview preparation coaching.">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() { //<<====== wont work without this
-            $(window).scroll(function() {
-                console.log('logging'+$(body).scrollTop());
-                if($(body).scrollTop() < 20){
-                    $('.navBar').removeClass('scrolled opened').addClass('invertColor');
-                } else if($(body).scrollTop() < 30){
-                    $('.navBar').removeClass('opened').addClass('scrolled');
-                } else{
-                    $('.navBar').addClass('scrolled opened').removeClass('invertColor');
-                }
-            });
-            $('#btn').click(function(){
-                let data = {"_cmd":"insert", "name": $("#name").val(), "phone" : $("#phone").val(), "email": $("#email").val(), "type": $("#type").val()};
-                if(!(data.name && data.phone && data.type && data.email)){
-                    $('#output').addClass('error').removeClass('success').html("Error:You need to fillup all data.").show();
-                    return;
-                }
-                $.ajax({
-                    type: "POST",
-                    url: 'http://simplestore.dipankar.co.in/api/nodel_codeninja',
-                    dataType: 'json',
-                    data: JSON.stringify(data),
-                    success: function (data) {
-                        $('#output').addClass('success').removeClass('error').html("Success: Request received").show();
-                    }
-                });
-            })
-        });
-    </script>
-    <style>
-        .box{
-            height: 460px;
-        }
-        .hero img {
-            height: 120px; 
-        }
-        .logo {
-            vertical-align: middle;
-            margin-right: 10px;
-            width: auto!important;
-            color:#7a00ff;
-        }
-        .navBar{
-            color:#7a00ff;
-        }
-        .backgroud{
-            padding-bottom: 150px;
-            overflow: hidden;
-        }
-        .backgroud:before {
-            background: #665fee;
-            background: -moz-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
-            background: -webkit-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
-            background: -o-linear-gradient(45deg, #665fee 0%, #27c2de 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#665fee', endColorstr='#27c2de',GradientType=1 );
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-        .backgroud:after {
-            content: "";
-            position: absolute;
-            bottom: -100px;
-            left: -50px;
-            height: 200px;
-            width: 130%;
-            background-color: #f2f4f9;
-            -webkit-transform: rotate(-4deg); 
-            -ms-transform: rotate(-4deg);
-            transform: rotate(-4deg); 
-            z-index: 10;
-        }
-        body{
-            background-color: #f2f4f9;
-        }
-    </style>
-</head>
-<body id="body" class="colorScheme">
-    <!-- Main Body-->
-    <div class="backgroud relativePosition">
-        <div class="container relativePosition">
-            <!-- header-->
-            <div class="gridBlock navBar invertColor">
-                <div class="oneByTwo">
-                    <ul class="inlineList textLeft">
-                        <li><a href="./index.html">
-                            <img class="logo" src="logo.png" alt="Interview BootCamp" height="42" width="42">
-                            <span>Crack The Google</span>
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="oneByTwo">
-                    <ul class="inlineList textRight">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#feature">Features</a></li>
-                        <li><a href="#price">Price</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#invite">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Home -->
-            
+{% extends "layout.njk" %}
+{% block home %}
     <meta name="og:title" property="og:title" content="A Systematic Approach To Crack Software Interview In 12 Weeks">
     <a name="home"></a>
     <div class="gridBlock textCenter regularGap invertColor">
@@ -137,10 +25,9 @@
             <p class="paragraph ">We focus on the techniques rather the problems. We teach you how you should start exploring the problem, finding trade-offs and how to get into the solution. </p>
         </div>
     </div>
+{% endblock %}
 
-        </div>
-    </div>
-    
+{% block content %}
 <!-- Features-->
 <a name="feature"></a>
 <div class="container">
@@ -332,41 +219,4 @@
         </ul>
     </div>
 </div>
-
-    <!-- Footer-->
-    <div class="gridBlock section_gap">
-        <ul class="inlineList textCenter">
-            <li><span class="colophon">Crack The Google BootCamp © 2019</span></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#feature">Features</a></li>
-            <li><a href="#price">Price</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#invite">Contact Us</a></li>
-        </ul>
-    </div>
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
-        <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-            xfbml            : true,
-            version          : 'v3.3'
-            });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-        <!-- Your customer chat code -->
-        <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="626320334437973"
-        theme_color="#fa3c4c">
-        </div>
-</body>
-</html>
+{% endblock %}
