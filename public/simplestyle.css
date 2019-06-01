@@ -209,6 +209,7 @@ body.inspect div {
   border-radius: 0.25rem;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+  text-decoration: none !important;
 }
 
 .btn.primary {
@@ -543,46 +544,6 @@ a {
 }
 
 /* Define Gaps */
-.lineGap {
-  margin-top: 1em;
-}
-
-.regularGap {
-  margin-top: 50px;
-}
-
-.largeGap {
-  margin-top: 75px;
-}
-
-.xlargeGap {
-  margin-top: 100px;
-}
-
-.xxlargeGap {
-  margin-top: 150px;
-}
-
-.lineHGap {
-  margin-left: 1em;
-}
-
-.regularHGap {
-  margin-left: 20px;
-}
-
-.largeHGap {
-  margin-left: 35px;
-}
-
-.xlargeHGap {
-  margin-left: 50px;
-}
-
-.xxlargeHGap {
-  margin-left: 100px;
-}
-
 /* Define Text Align */
 .textCenter {
   text-align: center;
@@ -609,28 +570,78 @@ a {
   padding: 0 !important;
 }
 
-.padding {
-  padding: 0;
+/* define padding */
+.padding_n {
+  padding: 0em;
 }
 
-.padding.s {
-  padding: 4px;
+.padding_s {
+  padding: 0.5em;
 }
 
-.padding.m {
+.padding_m {
   padding: 1em;
 }
 
-.padding.l {
+.padding_l {
   padding: 2em;
 }
 
-.padding.xl {
+.padding_xl {
   padding: 3em;
 }
 
-.padding.xxl {
+.padding_xxl {
   padding: 4em;
+}
+
+/* Define gaps */
+.gap_n {
+  margin-top: 0em;
+}
+
+.gap_s {
+  margin-top: 1em;
+}
+
+.gap_m {
+  margin-top: 50px;
+}
+
+.gap_l {
+  margin-top: 75px;
+}
+
+.gap_xl {
+  margin-top: 100px;
+}
+
+.gap_xxl {
+  margin-top: 150px;
+}
+
+.hgap_n {
+  margin-left: 0em;
+}
+
+.hgap_s {
+  margin-left: 1em;
+}
+
+.hgap_m {
+  margin-left: 20px;
+}
+
+.hgap_l {
+  margin-left: 35px;
+}
+
+.hgap_xl {
+  margin-left: 50px;
+}
+
+.hgap_xxl {
+  margin-left: 100px;
 }
 
 /* Defining overlapping layer */
