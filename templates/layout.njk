@@ -5,35 +5,9 @@
     <title>Coding Interview Preparation | Land a job in Google, Amazon, Apple, Microsoft, Facebook. </title>
     <meta name="description" content="the best Structured interview preparation coaching.">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3"></script>
     <script>
-        $(document).ready(function() { //<<====== wont work without this
-            $(window).scroll(function() {
-                console.log('logging'+$(body).scrollTop());
-                if($(body).scrollTop() < 20){
-                    $('.navBar').removeClass('scrolled opened').addClass('invertColor');
-                } else if($(body).scrollTop() < 30){
-                    $('.navBar').removeClass('opened').addClass('scrolled');
-                } else{
-                    $('.navBar').addClass('scrolled opened').removeClass('invertColor');
-                }
-            });
-            $('#btn').click(function(){
-                let data = {"_cmd":"insert", "name": $("#name").val(), "phone" : $("#phone").val(), "email": $("#email").val(), "type": $("#type").val()};
-                if(!(data.name && data.phone && data.type && data.email)){
-                    $('#output').addClass('error').removeClass('success').html("Error:You need to fillup all data.").show();
-                    return;
-                }
-                $.ajax({
-                    type: "POST",
-                    url: 'http://simplestore.dipankar.co.in/api/nodel_codeninja',
-                    dataType: 'json',
-                    data: JSON.stringify(data),
-                    success: function (data) {
-                        $('#output').addClass('success').removeClass('error').html("Success: Request received").show();
-                    }
-                });
-            })
-        });
+        
     </script>
     <style>
         .box{
@@ -151,4 +125,5 @@
         theme_color="#fa3c4c">
         </div>
 </body>
+    <script src="./ctg.js"></script>
 </html>
