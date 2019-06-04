@@ -556,6 +556,10 @@ a {
   text-align: right;
 }
 
+.textJustify {
+  text-align: justify;
+}
+
 .alignMiddle {
   vertical-align: middle;
 }
@@ -650,6 +654,10 @@ a {
 
 .absolutePosition {
   position: absolute;
+}
+
+.theme-white .colorDark {
+  color: #212529;
 }
 
 /*  we define color scheme  - We need to how this can effect the theme*/
