@@ -58,7 +58,7 @@ $(document).ready(function() { //<<====== wont work without this
           });
     });
 
-    $('#ninja_camp3').click(function(){
+    $('.ninja_camp3').click(function(){
         stripe.redirectToCheckout({
             items: [{sku: 'sku_FAghzQchj8b7L2', quantity: 1}],
             successUrl: 'http://www.crackthegoogle.com/success.html',

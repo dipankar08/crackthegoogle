@@ -1,0 +1,12 @@
+{
+    "saveAndRun": {
+        "commands": [
+          {
+            "match": ".njk",
+            "cmd": "./run.sh",
+            "useShortcut": false,
+            "silent": false
+          }
+        ]
+      }
+}

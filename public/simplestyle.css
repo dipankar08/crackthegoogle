@@ -471,6 +471,18 @@ p a {
   background: white;
 }
 
+.theme-white .box.disabled {
+  border-color: #f2f4f9 !important;
+}
+
+.theme-light .box.disabled {
+  border-color: !important;
+}
+
+.theme-dark .box.disabled {
+  border-color: !important;
+}
+
 /*Table*/
 table, th, td {
   border-collapse: collapse;
@@ -675,15 +687,20 @@ a {
 }
 
 .colorScheme .invertColor {
-  color: #ffffff;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
   background: transparent;
 }
 
 .colorScheme .invertColor a, .colorScheme .invertColor a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
-.colorScheme .invertColor p {
-  color: #ffffff;
+.colorScheme .invertColor p, .colorScheme .invertColor span {
+  color: #ffffff !important;
+}
+
+.colorScheme .invertColor .btn {
+  border-color: #ffffff !important;
 }
 /*# sourceMappingURL=simplestyle.css.map */
