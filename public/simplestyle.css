@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Best Design Website 
 1. https://crello.com/user/settings/account/
 */
@@ -69,6 +70,10 @@ body.inspect div {
   .gridBlock {
     display: block;
   }
+}
+
+.gridBlock.hide {
+  display: none;
 }
 
 .gridBlock .oneByOne {
@@ -166,6 +171,10 @@ body.inspect div {
   border-color: #ffffff;
 }
 
+.inputForm input.hide, .inputForm select.hide, .inputForm textarea.hide {
+  display: none;
+}
+
 .inputForm input[type="radio"], .inputForm select[type="radio"], .inputForm textarea[type="radio"] {
   width: auto;
   height: auto;
@@ -240,6 +249,19 @@ body.inspect div {
 }
 
 /* Item List */
+ul {
+  list-style: none;
+}
+
+ul.spaced li {
+  margin-bottom: 1rem;
+  /* top will break multi list*/
+}
+
+.theme-white ul.spaced li.head {
+  color: #1d82ff;
+}
+
 ul.inlineList {
   width: 100%;
   display: inline-block;
@@ -260,11 +282,25 @@ ul.oneColumn li {
 
 ul.twoColumn {
   width: 100%;
+  -webkit-column-count: 2;
+  column-count: 2;
   margin-right: 45px;
 }
 
 ul.twoColumn li {
   margin-bottom: 45px;
+}
+
+ul.threeColumn {
+  width: 100%;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+
+ul.tick li:before {
+  content: '✓';
+  padding-right: 10px;
+  color: #018326;
 }
 
 .navBar {
@@ -674,12 +710,15 @@ a {
 
 /*  we define color scheme  - We need to how this can effect the theme*/
 .colorScheme {
-  color: #111111;
   background: transparent;
 }
 
-.colorScheme a, .colorScheme a:hover {
-  color: #AAAAAA;
+.theme-white .colorScheme {
+  color: #212529;
+}
+
+.theme-white .colorScheme a, .theme-white .colorScheme a:hover {
+  color: #212529;
 }
 
 .colorScheme p.sectionSubHeading {
@@ -702,5 +741,9 @@ a {
 
 .colorScheme .invertColor .btn {
   border-color: #ffffff !important;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=simplestyle.css.map */
