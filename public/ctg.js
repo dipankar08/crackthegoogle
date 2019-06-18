@@ -32,8 +32,8 @@ $(document).ready(function() { //<<====== wont work without this
     $('#ninja_camp1').click(function(){
         stripe.redirectToCheckout({
             items: [{sku: 'sku_FAgfjmsfRg47ge', quantity: 1}],
-            successUrl: 'http://www.crackthegoogle.com/success.html',
-            cancelUrl: 'http://www.crackthegoogle.com/error.html',
+            successUrl: 'https://crackthegoogle.com/success.html',
+            cancelUrl: 'https://crackthegoogle.com/error.html',
           })
           .then(function (result) {
             if (result.error) {
@@ -46,8 +46,8 @@ $(document).ready(function() { //<<====== wont work without this
     $('#ninja_camp2').click(function(){
         stripe.redirectToCheckout({
             items: [{sku: 'sku_FAggz1fQWNE8pK', quantity: 1}],
-            successUrl: 'http://www.crackthegoogle.com/success.html',
-            cancelUrl: 'http://www.crackthegoogle.com/error.html',
+            successUrl: 'https://crackthegoogle.com/success.html',
+            cancelUrl: 'https://crackthegoogle.com/error.html',
           })
           .then(function (result) {
             if (result.error) {
@@ -61,8 +61,8 @@ $(document).ready(function() { //<<====== wont work without this
     $('.ninja_camp3').click(function(){
         stripe.redirectToCheckout({
             items: [{sku: 'sku_FAghzQchj8b7L2', quantity: 1}],
-            successUrl: 'http://www.crackthegoogle.com/success.html',
-            cancelUrl: 'http://www.crackthegoogle.com/error.html',
+            successUrl: 'https://crackthegoogle.com/success.html',
+            cancelUrl: 'https://crackthegoogle.com/error.html',
           })
           .then(function (result) {
             if (result.error) {

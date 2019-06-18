@@ -461,10 +461,6 @@ p a {
 }
 
 /* Define Box - TESTED */
-.box {
-  padding: 1em;
-}
-
 .theme-white .box {
   border: 1px solid #e9ecef !important;
 }
